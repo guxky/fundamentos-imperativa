@@ -45,3 +45,6 @@ print("\nusando lstrip():"  + name_2.lstrip())
 print("\nusando rlstrip():"  + name_2.rstrip())
 print("\nusando strip():"  + name_2.strip())
 
+"""
+POR AHROA SON EJEMPLOS FACILES MIENTRAS TERMINO DE ESTUDIAR LA TEORIA Y HACER LOS EJERCICIOS DEL LIBRO 
+"""
