@@ -20,7 +20,6 @@ lo necesite, desde donde pueda revisar todas las notas junto con su clasificaci√
 """
 
 notas = [85, 92, 45, 78, 100, 33, 67, 90, 55, 72]
-indice = 0
 
 while True:
     print("\n1. Ver todas las notas")
@@ -34,7 +33,7 @@ while True:
             break
         case "1":
             print("------LISTADO DE NOTAS------")
-            for indice, nota in enumerate(notas):
+            for indice, nota in enumerate(notas, start=1):
                 if 90 <= nota <= 100:
                     print(f" ESRUDIANTE {indice}   {nota} -> Excelente")
                 elif 70 <= nota <= 89:
