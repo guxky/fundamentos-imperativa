@@ -10,9 +10,7 @@ lo necesite, desde donde pueda revisar todas las notas junto con su clasificaci�
  con loops y variables, y manejando con cuidado cualquier opción inválida que el usuario 
  llegue a ingresar en el menú.
  
-"""
-#CLASIFICACION DE LAS NOTAS:
-"""
+CLASIFICACION DE LAS NOTAS:
 90-100 → "Excelente"
 70-89 → "Aprobado"
 50-69 → "Necesita mejorar"
