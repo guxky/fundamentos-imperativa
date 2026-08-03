@@ -25,9 +25,9 @@ while True:
     print("\n1. Ver todas las notas")
     print("2. Ver estadisticas")
     print("3. Salir")
-    opc_1 = input("Elige una opcion: ")
+    opc = input("Elige una opcion: ")
 
-    match opc_1:
+    match opc:
         case "3":
             print("Hasta luego")
             break
