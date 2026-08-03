@@ -136,7 +136,7 @@ while True:
 
     match opc :
         case "6":
-            print("Hasta luego")
+            print("\nHasta luego")
             break
 
         case "1":
@@ -149,7 +149,14 @@ while True:
         case "3":
             print(f"\n--- REGISTRAR VENTA ---")
             producto_v = input("Producto a vender: ").lower().strip()
-            cantidad = int(input("Cantidad a vender: "))
+            
+            while True:
+                try:
+                    cantidad = int(input("Cantidad a vender: "))
+                    break
+                except ValueError:
+                    print("\nDigite solo numeros por favor")
+
             print(registrar_venta(producto_v, cantidad, inventario))
 
         case "4":
