@@ -1,7 +1,5 @@
 from reportes import generar_reporte
 
-print(dir())
-
 if __name__ == "__main__":
 
     estudiantes = {
