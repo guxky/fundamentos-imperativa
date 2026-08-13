@@ -44,18 +44,15 @@ if __name__ == "__main__":
 
         elif opcion == "5":
             isbn = input("ISBN a buscar: ")
-            resultado = buscar_libro_isbn(catalogo_libros, isbn)
-            print(resultado)
+            print(buscar_libro_isbn(catalogo_libros, isbn))
 
         elif opcion == "6":
             id_socio = input("ID del socio a buscar: ")
-            resultado = buscar_socio(socios, id_socio)
-            print(resultado)
+            print(buscar_socio(socios, id_socio))
 
         elif opcion == "7":
             autor = input("Autor a buscar: ")
-            resultado = buscar_libros_autor(catalogo_libros, autor)
-            print(resultado)
+            print(buscar_libros_autor(catalogo_libros, autor))
 
         elif opcion == "8":
             print(mostrar_catalogo(catalogo_libros))
