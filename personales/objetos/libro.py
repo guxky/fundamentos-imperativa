@@ -10,22 +10,48 @@ class Libro:
         if not vali.es_nombre_valido(autor):
             raise ValueError(f"\nEl nombre del autor no es valido")
         
-        if not titulo: raise ValueError{f"\nEl titulo no puede ir vacio"}
+        if not titulo: 
+            raise ValueError(f"\nEl titulo no puede ir vacio")
         
-        self.isbn = isbn
-        self.titulo = titulo
-        self.autor = autor
-        self.disponibilidad = True
-        self.cola_espera = deque()
+        self._isbn = isbn
+        self._titulo = titulo
+        self._autor = autor
+        self._disponibilidad = True
+        self._prestado_a = None
+        self._cola_espera = deque()
 
-    def get_isbn(self):
-        return self.isbn
+    @property
+    def isbn(self):
+        return self._isbn
 
-    def get_autor(self):
-        return self.autor
+    @property
+    def titulo (self):
+        return self._titulo
 
-    def set_disponibilidad(self, estado):
-        self.disponibilidad = estado
+    @property
+    def autor(self):
+        return self._autor
+    
+    @property
+    def disponibilidad(self):
+        return self._disponibilidad
+
+    @property
+    def prestado_a(self):
+        return self._prestado_a
+    
+    @property
+    def cola_espera(self):
+        return self._cola_espera
+
+    @disponibilidad.setter
+    def disponibilidad(self, estado):
+        self._disponibilidad = estado
+
+    @prestado_a.setter
+    def prestado_a(self, socio):
+        self._prestado_a = socio
+
 
     def __str__(self):
         acum = f'{self.isbn}\t{self.titulo}\t{self.autor}'
