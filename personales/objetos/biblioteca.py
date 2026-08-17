@@ -21,12 +21,12 @@ class Biblioteca:
         l = next((l for l in self.catalogo if l.isbn == isbn), None)
 
         if s is None:
-            raise ValueError(f'\nEl socio no se encuentr {s.nombre} no se encuentra en el catalogo')
+            raise ValueError(f'\nEl socio no se encuentr no se encuentra en el catalogo')
         if l is None:
-            raise ValueError(f'\nEl libro {l.titulo} no se encuentra registrado en el catalogo')
+            raise ValueError(f'\nEl libro no se encuentra registrado en el catalogo')
 
         if l.disponibilidad:
-            l.pretado_a = s
+            l.prestado_a = s
             l.disponibilidad = False
             return f'\nSe presto el libro {l.titulo} a {s.nombre}'
 
@@ -44,6 +44,9 @@ class Biblioteca:
 
         l = next((l for l in self.catalogo if l.isbn == isbn), None)
 
+        if l is None:
+                    raise ValueError(f'\nEl libro no se encuentra registrado en el catalogo')
+
         if l.disponibilidad:
             return f'\nEl libro {l.titulo} ya se encuentra disponible'
 
@@ -54,7 +57,7 @@ class Biblioteca:
 
         else:
             l.prestado_a = l.cola_espera.popleft()
-            return f'\nSe devolvio el libro \nSe asigno el libro {l.titulo} a {l.pestado_a}'
+            return f'\nSe devolvio el libro \nSe asigno el libro {l.titulo} a {l.prestado_a}'
 
         
 

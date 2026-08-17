@@ -10,3 +10,4 @@ class Socio:
     @property
     def nombre(self):
         return self._nombre
+

@@ -3,7 +3,7 @@ from socios import Socios
 from libro import Libro
 from socio import Socio
 from biblioteca import Biblioteca
-
+from validaciones import existe_id
 
 def mostrar_menu() -> None:
     print("\n=== SISTEMA DE BIBLIOTECA (OOP) ===")
@@ -51,6 +51,12 @@ if __name__ == "__main__":
 
         elif opcion == "2":
             id_socio = input("ID del socio: ")
+            while True:
+                print(f'\nEl id {id_socio} ya se encuentra en uso')
+                id_socio = input("ID del socio: ")
+                if existe_id (socios, id_socio) is None:
+                    break
+
             nombre = input("Nombre: ")
             socio = Socio(id_socio, nombre)
             socios.registrar_socio(socio)
